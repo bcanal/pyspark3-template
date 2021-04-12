@@ -67,7 +67,7 @@ poetry build
 ```
  5. Empacotamento das dependências
 ```
-poetry export -f requirements.txt --output requirements.txt
+poetry export --without-hashes --format requirements.txt --output requirements.txt
 pex -r requirements.txt ./dist/pyspark3_template-0.1.0-py3-none-any.whl -o dependencies.pex
 deactivate
 ```
