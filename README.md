@@ -38,29 +38,29 @@ O projeto cria uma estrutura baseada no Poetry usando o requests como dependenci
         └── test_pyspark3_template.py
         ```
    3.1. código do driver.py
-   ```
-   import sys
-   import importlib
-   if len(sys.argv) == 1:
-       raise SyntaxError("Please provide a module to load.")
-   module = importlib.import_module(sys.argv[1])
-   module.main(sys.argv[2:])
-   ```
+     ```
+     import sys
+     import importlib
+     if len(sys.argv) == 1:
+         raise SyntaxError("Please provide a module to load.")
+     module = importlib.import_module(sys.argv[1])
+     module.main(sys.argv[2:])
+     ```
    3.2. código do requester.py
-   ```
-   import sys, requests
-   from pyspark.sql import SparkSession
-   def main(args):
-       url = 'https://api.github.com'
-       spark = SparkSession.builder.getOrCreate()
-       r = requests.get(url)
-       spark.sql(
-           """
-           SELECT {url} as url, {status_code} as status_code
-           """.format(url=url, status_code=r.status_code)
-       ).show(truncate=False)
-   main(sys.args)
-   ```
+     ```
+     import sys, requests
+     from pyspark.sql import SparkSession
+     def main(args):
+         url = 'https://api.github.com'
+         spark = SparkSession.builder.getOrCreate()
+         r = requests.get(url)
+         spark.sql(
+             """
+             SELECT {url} as url, {status_code} as status_code
+             """.format(url=url, status_code=r.status_code)
+         ).show(truncate=False)
+     main(sys.args)
+     ```
  4. Criar um arquivo app.py no path do projeto, com o código
     ```
     import requests
