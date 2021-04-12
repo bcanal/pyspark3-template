@@ -34,7 +34,7 @@ O projeto cria uma estrutura baseada no Poetry usando o requests como dependenci
  5. Empacotamento das dependências
     ```
     poetry export -f requirements.txt --output requirements.txt
-    pex -r requirements.txt -o env.pex
+    pex -r requirements.txt -o dependencies.pex
     deactivate
     ```
  6. Spark Submit Code:
