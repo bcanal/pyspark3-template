@@ -20,6 +20,7 @@ O projeto cria uma estrutura baseada no Poetry usando o requests como dependenci
     ```
     poetry shell
     pip install "pex>=2.1"
+    deactivate
     ```
  3. Criar um arquivo app.py no path do projeto, com o código
     ```
