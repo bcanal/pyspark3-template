@@ -80,5 +80,5 @@ cd pyspark3-template && \
 spark-submit \
   --master local \
   --conf spark.pyspark.python=./dependencies.pex \
-  pyspark3_template/driver.py app.requester
+  pyspark3_template/driver.py pyspark3_template.app.requester
 ```
