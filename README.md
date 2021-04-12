@@ -61,13 +61,7 @@ def main(args):
     ).show(truncate=False)
 main(sys.args)
 ```
- 4. Criar um arquivo app.py no path do projeto, com o código
-```
-import requests
-r = requests.get('https://api.github.com')
-print(r.status_code)
-```
- 5. Build da Aplicação
+ 4. Build da Aplicação
 ```
 poetry build
 ```
