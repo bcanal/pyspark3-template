@@ -56,7 +56,7 @@ def main(args):
     r = requests.get(url)
     spark.sql(
         """
-        SELECT {url} as url, {status_code} as status_code
+        SELECT '{url}' as url, {status_code} as status_code
         """.format(url=url, status_code=r.status_code)
     ).show(truncate=False)
 main(sys.args)
