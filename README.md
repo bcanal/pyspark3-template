@@ -14,7 +14,7 @@ O projeto cria uma estrutura baseada no Poetry usando o requests como dependenci
  1. Criar estrutura com Poetry e adicionar a dependencia requests
 ```
 poetry new pyspark3-template
-cd pyspark3-template && poetry add requests
+cd pyspark3-template && poetry add requests pyspark==3.1.1
 ```
  2. Adicionar no virtualenv o pex
 ```
