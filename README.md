@@ -43,5 +43,6 @@ O projeto cria uma estrutura baseada no Poetry usando o requests como dependenci
     spark-submit \
       --master local \
       --conf spark.pyspark.python=./dependencies.pex \
+      --py-files ./dist/pyspark3_template-0.1.0-py3-none-any.whl \
       app.py
     ```
