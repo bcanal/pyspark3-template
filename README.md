@@ -68,7 +68,7 @@ poetry build
  5. Empacotamento das dependências
 ```
 poetry export -f requirements.txt --output requirements.txt
-pex -r requirements.txt -o dependencies.pex
+pex -r requirements.txt ./dist/pyspark3_template-0.1.0-py3-none-any.whl -o dependencies.pex
 deactivate
 ```
  6. Spark Submit Code:
@@ -77,6 +77,5 @@ cd pyspark3-template && \
 spark-submit \
   --master local \
   --conf spark.pyspark.python=./dependencies.pex \
-  --py-files ./dist/pyspark3_template-0.1.0-py3-none-any.whl \
   pyspark3_template/driver.py app.requester
 ```
