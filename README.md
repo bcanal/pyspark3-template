@@ -71,7 +71,7 @@ poetry build
  5. Empacotamento das dependências
 ```
 poetry export --without-hashes --format requirements.txt --output requirements.txt
-pex -r requirements.txt ./dist/pyspark3_template-0.1.0-py3-none-any.whl -o dependencies.pex
+pex -r requirements.txt ./dist/*.whl -o .dist/dependencies.pex
 deactivate
 ```
  6. Spark Submit Code:
